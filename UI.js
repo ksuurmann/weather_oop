@@ -12,6 +12,5 @@ class UI {
         this.temp.innerHTML = `${celcius} &deg;C`;
         this.desc.textContent = cityWeather.weather[0].description;
         this.humidity.innerHTML = cityWeather.main.humidity + `%`;
-
     }
 }
