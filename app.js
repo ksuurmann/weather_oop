@@ -11,15 +11,14 @@ document.addEventListener('DOMContentLoaded', drawWeather);
 const changeBtn = document.querySelector('#w-change');
 changeBtn.addEventListener('click', changeWeather);
 
-function changeWeather(){
+function changeWeather() {
     const city = document.querySelector('#city').value;
     weather.changeCityName(city);
     drawWeather();
-    $('#ChangeCity').modal('hide');
-    console.log(weather);
+    $('#changeCity').modal('hide');
 }
 
-function drawWeather(){
+function drawWeather() {
     weather.weatherData().then(cityWeather => {
         ui.print(cityWeather);
     }).catch(error => console.log(error));
